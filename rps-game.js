@@ -62,6 +62,9 @@ function game(turns) {
   if (isNaN(turns)) {
     alert("Unexpected number of rounds! Finishing the game...");
     throw new Error("Invalid input for rounds");
+  } else if (turns === 0) {
+    alert("Number of rounds can't be 0! Finishing the game...");
+    throw new Error("Number of rounds was 0");
   }
   for (let i = 0; i < turns; i++) {
     alert(
